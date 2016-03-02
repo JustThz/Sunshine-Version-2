@@ -4,5 +4,7 @@
     <string name="app_name">Sunshine</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="permlab_internet">Access to Internet</string>
+    <string name="permdesc_internet">Allow the application to access to internet</string>
 
 </resources>
