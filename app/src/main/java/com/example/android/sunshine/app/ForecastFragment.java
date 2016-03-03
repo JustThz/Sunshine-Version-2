@@ -117,9 +117,9 @@ public class ForecastFragment extends Fragment {
                 // Possible parameters are avaiable at OWM's forecast API page, at
                 // http://openweathermap.org/API#forecast
                 Uri.Builder builder = new Uri.Builder();        //Para crear URL de abajo
-                builder.scheme("https")                         //"http://api.openweathermap.org/data/2.5/forecast/
+                builder.scheme("http")                         //"http://api.openweathermap.org/data/2.5/forecast/
                         .authority("api.openweathermap.org")    //daily?q=94043&mode=json&units=metric&cnt=7&
-                        .appendPath("data")                     //APPID =7&21bc600df014fa2c0beb6d7ca2df89e7";
+                        .appendPath("data")                     //APPID =21bc600df014fa2c0beb6d7ca2df89e7";
                         .appendPath("2.5")
                         .appendPath("forecast")
                         .appendPath("daily")
