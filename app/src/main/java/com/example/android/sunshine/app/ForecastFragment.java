@@ -314,7 +314,7 @@ public class ForecastFragment extends Fragment {
             }
 
             try {
-                return getWeatherDataFromJson(forecastJsonStr, numDays);
+                return getWeatherDataFromJson(forecastJsonStr, numDays);            //ESTA ES NUESTRA SALIDA PARA POSEXECUTE
             } catch (JSONException e) {
                 Log.e(LOG_TAG, e.getMessage(), e);
                 e.printStackTrace();
@@ -322,6 +322,17 @@ public class ForecastFragment extends Fragment {
 
             // This will only happen if there was an error getting or parsing the forecast.
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(String[] result) {
+            if (result != null) {
+                mForecastAdapter.clear();
+                for(String dayForecastStr : result) {                   //Muestra cada uno de los nombres dentro de result
+                    mForecastAdapter.add(dayForecastStr);               //Este caso nuestro array getWeatherDataFromJson
+                }
+                // New data is back from the server.  Hooray!
+            }
         }
     }
 }
